@@ -1,3 +1,4 @@
+// Question 1
 // Degree Fahrenheit to Degree Celsuius converter
 function convertFahrToCelsius(tempInFahr) {
     let F = tempInFahr;
@@ -15,11 +16,21 @@ console.log(convertFahrToCelsius('0'))
 console.log(convertFahrToCelsius([1,2,3]));
 console.log(convertFahrToCelsius({temp: 0}));
 
+// Question 2
+function count(n) {
+    if (n == 1) {
+        return [1];
+    } else {
+        var numbers = count(n-1);
+        numbers.push(n);
+        return numbers;
+    }
+}
 
 // checkYuGiOh
 function checkYuGiOh(positiveNum) {
-   listOfNumbers = array((i=1, i++, n=positiveNum));
-   return listOfNumbers
+   listOfNumbers = count(positiveNum);
+    return listOfNumbers;
 }
 
 console.log(checkYuGiOh(10));
